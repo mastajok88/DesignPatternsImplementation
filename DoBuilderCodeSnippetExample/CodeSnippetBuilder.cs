@@ -6,6 +6,11 @@ namespace DoBuilderCodeSnippetExample
 {
     public abstract class CodeSnippetBuilder
     {
+        protected CodeSnippet CodeSnippet = new CodeSnippet();
 
+        public CodeSnippetBuilder(string className)
+        {
+            this.CodeSnippet.ClassName = className;
+        }
     }
 }

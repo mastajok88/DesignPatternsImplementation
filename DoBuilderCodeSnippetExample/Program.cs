@@ -6,7 +6,13 @@ namespace DoBuilderCodeSnippetExample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //build object piece by piece
+            var cc = new CodeClassBuilder("Person")
+                .AddField("Age", "int")
+                .AddField("Name", "string")
+                .Build();
+            
+            Console.WriteLine(cc);
         }
     }
 }
